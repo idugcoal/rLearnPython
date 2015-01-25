@@ -1,3 +1,4 @@
+# 99 bottles of beer on the wall
 for i in range(99, 0, -1):
 	b = "bottles"
 	print "%d %s of beer on the wall" % (i, b)
