@@ -7,13 +7,21 @@ Quarter:	.25		5.670 grams		40
 """
 
 # IDEA: put above data into a list and loop thru it
+from math import ceil
 
-weight_pennies = int(raw_input("Weight of pennies: "))
-weight_nickels = int(raw_input("Weight of nickels: "))
-weight_dimes = int(raw_input("Weight of dimes: "))
-weight_quarters = int(raw_input("Weight of quarters: "))
+coin_types = [
+['pennies', .01, 2.500, 50],
+['nickels', .05, 5.000, 40],
+['dimes', .10, 2.268, 50],
+['quarters', .25, 5.670, 40]
+]
 
-num_pennies = weight_pennies / 2.500
-num_nickels = weight_nickels / 5.000
-num_dimes = weight_dimes / 2.268
-num_quarters = weight_quarters / 5.670
+bank = 0.0 
+for coin, value, weight, roll in coin_types:
+	coin_weight = float(raw_input("Enter weight of %s:" % coin))
+	num_coins = ceil(coin_weight / weight)
+	num_rolls = ceil(num_coins / roll)
+	total_value = float(num_coins * value)
+	bank += total_value
+	print("You have %d %s totaling $%.2f. You will need %d rolls." % (num_coins, coin, total_value, num_rolls))
+print("Your total is $%.2f" % bank)
