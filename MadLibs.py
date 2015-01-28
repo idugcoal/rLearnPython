@@ -15,13 +15,14 @@ Doug is a happy guy who likes to eat pancakes. He has a red pet aardvark named G
 that eats peanut butter. 
 """
 
+# Need to find a way to put this in a loop
 name1 = raw_input("Enter name: ")
 adj1 = raw_input("Enter adjective: ")
 food1 = raw_input("Enter food: ")
 adj2 = raw_input("Enter adjective: ")
-pet1 = raw_input("Enter pet: ")
+pet1 = raw_input("Enter animal: ")
 name2 = raw_input("Enter name: ")
 food2 = raw_input("Enter food: ")
 
 print("%s is a %s guy who likes to eat %s." % (name1, adj1, food1)) 
-print("He has a %s pet %s named %s that eats %s." % (adj2, pet1, name2, food2))
+print("He has a %s pet %s named %s that eats %ss." % (adj2, pet1, name2, food2))
